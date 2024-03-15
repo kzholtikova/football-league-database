@@ -66,6 +66,7 @@ FROM attendees a
 GROUP BY season_id, match_day_id
 HAVING leagues_playing = 1;
 
+-- refactored
 SELECT s.name, md.day_number, (SELECT COUNT(DISTINCT league_id) FROM teams t 
                                WHERE t.id IN (SELECT team_id FROM attendees a 
                                               WHERE a.match_id IN (SELECT id FROM matches m 
