@@ -16,10 +16,11 @@ cursor = conn.cursor()
 
 # Instantiate Faker with a specific seed for reproducibility
 fake = Faker()
-Faker.seed()
+Faker.seed(14)
 
 # Shared progress counter using Value
 progress = Value('i', 0)
+
 
 # Function to generate random teams data
 def generate_teams_data(_):
@@ -37,26 +38,41 @@ def generate_teams_data(_):
 
     return team_name, city, stadium, manager, league_id
 
-# Function to insert teams data into the database
-# Function to insert teams data into the database
-def insert_teams_data(team_data):
+
+def generate_attendees_data(_):
+    match_id = random.randint(1, 25)
+    team_id = random.randint(1, 21000034)
+    is_home = random.randint(0, 1)
+    is_winner = random.randint(0, 1)
+
+    with progress.get_lock():
+        progress.value += 1
+
+    if progress.value % 100000 == 0:
+        print(f"{progress.value/1000}k")
+
+    return match_id, team_id, is_home, is_winner
+
+
+def insert_data(data, query):
     batch_size = 1000  # Adjust the batch size as needed
-    for i in range(0, len(team_data), batch_size):
-        batch = team_data[i:i+batch_size]
-        query = "INSERT INTO teams (name, city, stadium, manager, league_id) VALUES (%s, %s, %s, %s, %s)"
+    for i in range(0, len(data), batch_size):
+        batch = data[i:i+batch_size]
         cursor.executemany(query, batch)
         conn.commit()
 
-# Number of teams you want to generate
-num_teams_to_generate = 10000000
+
+# Number of records you want to generate
+num_records_to_generate = 1000000
+insert_statement = "INSERT INTO attendees2 (match_id, team_id, is_home, is_winner) VALUES (%s, %s, %s, %s)"
 
 # Use multiprocessing Pool for parallel generation
 if __name__ == "__main__":
     try:
         # Run the code with multiprocessing
         with Pool() as pool:
-            teams_data_to_insert = pool.map(generate_teams_data, range(num_teams_to_generate))
-            insert_teams_data(teams_data_to_insert)
+            data_to_insert = pool.map(generate_attendees_data, range(num_records_to_generate))
+            insert_data(data_to_insert, insert_statement)
     except KeyboardInterrupt:
         print("Process interrupted. Cleaning up...")
     finally:
