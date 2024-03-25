@@ -10,3 +10,16 @@ db = mysql.connector.connect(
     database="football_system"
 )
 c = db.cursor()
+
+referees_create = """CREATE TABLE referees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    nationality TEXT NOT NULL,
+    experience INT)"""
+c.execute(referees_create)
+c.execute("DESC referees")
+print("DESC referees")
+for i in c:
+    print(i)
+
+db.close()
