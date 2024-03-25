@@ -60,4 +60,15 @@ print("\nSELECT FROM matches")
 for m in matches_data:
     print(m)
 
+refereed_delete_update = """UPDATE matches SET referee_id = NULL 
+    WHERE referee_id IN (SELECT id FROM referees WHERE experience = 0)"""
+referees_delete = """DELETE FROM referees WHERE experience = 0"""
+c.execute(refereed_delete_update)
+c.execute(referees_delete)
+db.commit()
+c.execute("SELECT * FROM referees")
+print("\nDELETE FROM referees")
+for r in c:
+    print(r)
+
 db.close()
