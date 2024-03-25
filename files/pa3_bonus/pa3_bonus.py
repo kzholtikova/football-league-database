@@ -22,4 +22,13 @@ print("DESC referees")
 for i in c:
     print(i)
 
+fake = Faker()
+referees_insert = """INSERT INTO referees (name, nationality, experience) VALUES (%s, %s, %s)"""
+referees_data = [(fake.name(), fake.country(), fake.random.randint(0, 5)) for _ in range(5)]
+c.executemany(referees_insert, referees_data)
+db.commit()
+print("\nData to INSERT INTO referees")
+for r in referees_data:
+    print(r)
+
 db.close()
