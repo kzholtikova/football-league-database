@@ -50,4 +50,14 @@ print("\nUPDATE matches")
 for m in c:
     print(m)
 
+# matches with experienced referees
+matches_select = """SELECT m.name, r.name, r.experience FROM matches m
+    JOIN referees r on r.id = m.referee_id
+    WHERE r.experience >= 3"""
+c.execute(matches_select)
+matches_data = c.fetchall()
+print("\nSELECT FROM matches")
+for m in matches_data:
+    print(m)
+
 db.close()
