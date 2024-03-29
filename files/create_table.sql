@@ -2,20 +2,20 @@ CREATE SCHEMA football_system;
 USE football_system;
 
 CREATE TABLE seasons (
-    id INTEGER PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     start_date DATE NOT NULL
 );
 
 CREATE TABLE leagues (
-    id INTEGER PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     country TEXT NOT NULL,
     teams_number INT NOT NULL
 );
 
 CREATE TABLE match_days (
-    id INTEGER PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     season_id INTEGER NOT NULL,
     day_number INTEGER NOT NULL CHECK (day_number > 0),
     CONSTRAINT season2day_unique UNIQUE (season_id, day_number),
@@ -23,7 +23,7 @@ CREATE TABLE match_days (
 );
 
 CREATE TABLE players (
-    id INTEGER PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     birthdate DATE NOT NULL,
     nationality TEXT,
@@ -31,8 +31,8 @@ CREATE TABLE players (
 );
 
 CREATE TABLE teams (
-    id INTEGER PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
     city TEXT NOT NULL,
     stadium TEXT NOT NULL,
     manager TEXT NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE team_squads (
 );
 
 CREATE TABLE matches (
-    id INTEGER PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name TEXT NOT NULL,
     datetime DATETIME NOT NULL,
     venue VARCHAR(255) NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE matches (
 );
 
 CREATE TABLE attendees (
-    id INT AUTO INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     match_id INT,
     team_id INT,
     is_home BOOLEAN NOT NULL,
@@ -69,10 +69,10 @@ CREATE TABLE attendees (
 );
 
 CREATE TABLE goals (
-    id INT AUTO ICREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     player_id INT,
     attendee_id INT,
-    time TIME NOT NULL
+    time TIME NOT NULL,
     FOREIGN KEY (player_id) REFERENCES players(id),
     FOREIGN KEY (attendee_id) REFERENCES attendees(id)
 );
