@@ -46,7 +46,7 @@ def insert_data(data, query):
 
 # Number of records you want to generate
 num_records_to_generate = 1000000
-insert_statement = "INSERT INTO attendees2 (match_id, team_id, is_home, is_winner) VALUES (%s, %s, %s, %s)"
+insert_statement = "INSERT INTO attendees (match_id, team_id, is_home, is_winner) VALUES (%s, %s, %s, %s)"
 
 # Use multiprocessing Pool for parallel generation
 if __name__ == "__main__":
