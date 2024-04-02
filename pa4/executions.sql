@@ -14,10 +14,14 @@ WHERE s.name = 'Fall 2023';
 
 
 CALL define_match_winner('dgsd');
+
+UPDATE attendees a
+SET is_winner = NULL
+WHERE match_id IN (1,3);
 CALL define_match_winner('Premier League Opener');  -- match_id = 1
 CALL define_match_winner('Bundesliga Showdown');  -- match_id = 3
 
--- define_match_winner validation
+-- define_match_winner validation                 
 SELECT team_id, COUNT(g.id) scored
 FROM goals g
          JOIN football_system.attendees a on a.id = g.attendee_id
