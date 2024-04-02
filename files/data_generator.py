@@ -3,7 +3,6 @@ from faker import Faker
 import mysql.connector
 from multiprocessing import Pool, Value
 
-# Connect to MySQL
 conn = mysql.connector.connect(
     host="localhost",
     port=3306,
@@ -14,27 +13,16 @@ conn = mysql.connector.connect(
 )
 cursor = conn.cursor()
 
-# Instantiate Faker with a specific seed for reproducibility
 fake = Faker()
 Faker.seed(14)
 
-# Shared progress counter using Value
-progress = Value('i', 0)
 
-
-# Function to generate random teams data
 def generate_teams_data(_):
     team_name = fake.company()
     city = fake.city()
     stadium = f"{city} Stadium"
     manager = fake.name()
     league_id = random.randint(1, 3)
-
-    with progress.get_lock():
-        progress.value += 1
-
-    if progress.value % 100000 == 0:
-        print(f"{progress.value/1000}k")
 
     return team_name, city, stadium, manager, league_id
 
@@ -44,12 +32,6 @@ def generate_attendees_data(_):
     team_id = random.randint(1, 21000034)
     is_home = random.randint(0, 1)
     is_winner = random.randint(0, 1)
-
-    with progress.get_lock():
-        progress.value += 1
-
-    if progress.value % 100000 == 0:
-        print(f"{progress.value/1000}k")
 
     return match_id, team_id, is_home, is_winner
 
