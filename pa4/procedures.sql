@@ -21,5 +21,28 @@ BEGIN
     WHERE md.season_id = @season_id; 
 END $$
 
+-- update attendees table to define match winner based on number of goals scored
+CREATE PROCEDURE football_system.define_match_winner(IN match_name TEXT)
+BEGIN 
+    START TRANSACTION;
+        SET @match_id = (SELECT id FROM matches m WHERE name =  match_name);
+        IF @match_id IS NULL or (SELECT COUNT(1) FROM attendees a WHERE a.match_id = @match_id) != 2 THEN
+            ROLLBACK;
+            SELECT 'Invalid match id or attendees data' AS message;
+        END IF;
+
+        SET @max_scored = (SELECT MAX(goals.scored) 
+                           FROM (SELECT COUNT(g.id) scored
+                           FROM goals g
+                                JOIN attendees a ON a.id = g.attendee_id
+                           WHERE a.match_id = @match_id
+                           GROUP BY team_id) goals);
+    
+        UPDATE attendees a
+        SET is_winner = (SELECT COUNT(1) FROM goals g WHERE attendee_id = a.id) = @max_scored
+        WHERE match_id = @match_id;
+    COMMIT;
+END $$
+
 DELIMITER ;
     
