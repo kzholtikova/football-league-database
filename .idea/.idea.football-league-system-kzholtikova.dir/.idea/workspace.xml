@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32bae97c-f703-4ff0-8508-c154e801ba4e" name="Changes" comment="" />
+    <list default="true" id="32bae97c-f703-4ff0-8508-c154e801ba4e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/practice/create.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/queries.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/students.jpg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +22,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "structuring",
+    "git-widget-placeholder": "in-class-practice",
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.sourceCode.MySQL, MariaDB"
   },
