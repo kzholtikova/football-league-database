@@ -14,4 +14,4 @@ A relational database for a football league system. A football league system is 
 * `standings`: Stores information about every team's results in every league after every match day. Contains the following attributes: match day, team, points (won = 3, drawn = 1, lost = 0), played, won, drawn, lost, goals_for, goals_against. <br>
 
 ## Diagram
-![football_system](https://github.com/x01-software-engineering/dbe-assignment-01-kzholtikova/assets/145042018/b9daccf6-d97e-4a1c-a2bf-1bcacb570d11)
+![football_system](https://github.com/x01-software-engineering/dbe-assignment-01-kzholtikova/blob/structuring/res/football_system.png)
