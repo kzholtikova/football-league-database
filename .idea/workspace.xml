@@ -5,24 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad3aa6a8-253e-4f9d-9f27-f30e7dbcfa24" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pa4/pa4_bonus.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.football-league-system-kzholtikova.dir/.idea/dataSources/6c3af8d7-9f06-40da-856e-61578d363d45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.football-league-system-kzholtikova.dir/.idea/dataSources/6c3af8d7-9f06-40da-856e-61578d363d45.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/data_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/indexing.sql" beforeDir="false" afterPath="$PROJECT_DIR$/files/indexing.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pa4/procedures.sql" beforeDir="false" afterPath="$PROJECT_DIR$/pa4/procedures.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2dvQqKr1j78z7uF2PF8lqi7zBhW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,7 +45,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "assignment-four",
     "last_opened_file_path": "/Users/owner/Storage/KSE/IT Disciplines/IDB/football-league-system-kzholtikova"
   }
 }]]></component>
