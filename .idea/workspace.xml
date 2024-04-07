@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad3aa6a8-253e-4f9d-9f27-f30e7dbcfa24" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pa4/pa4_bonus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.football-league-system-kzholtikova.dir/.idea/dataSources/6c3af8d7-9f06-40da-856e-61578d363d45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.football-league-system-kzholtikova.dir/.idea/dataSources/6c3af8d7-9f06-40da-856e-61578d363d45.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pa4/procedures.sql" beforeDir="false" afterPath="$PROJECT_DIR$/pa4/procedures.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pa4/pa4_bonus/opponent_after.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pa4/pa4_bonus/opponent_before.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pa4/pa4_bonus/rollback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pa4/pa4_bonus/rollbacked_opponent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pa4/pa4_bonus/team_after.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pa4/pa4_bonus/team_before.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.football-league-system-kzholtikova.dir/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.football-league-system-kzholtikova.dir/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.football-league-system-kzholtikova.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.football-league-system-kzholtikova.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pa4/pa4_bonus.py" beforeDir="false" afterPath="$PROJECT_DIR$/pa4/pa4_bonus/pa4_bonus.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +51,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "assignment-four",
-    "last_opened_file_path": "/Users/owner/Storage/KSE/IT Disciplines/IDB/football-league-system-kzholtikova"
+    "last_opened_file_path": "/Users/owner/Storage/KSE/IT Disciplines/IDB/football-league-system-kzholtikova/pa4/pa4_bonus"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pa4/pa4_bonus" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pa4/pa4_bonus" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
