@@ -55,4 +55,12 @@ ORDER BY total_goals DESC;
 SELECT *
 FROM strikers_stats;
 
+-- amount of players with no goals scored so far
+SELECT COUNT(1)
+FROM strikers_stats
+WHERE total_goals IS NULL;
 
+-- strikers goal stats that have scored goals for more than 1 team (duals)
+SELECT player_name, total_goals, goals_by_team
+FROM strikers_stats
+WHERE (LENGTH(goals_by_team) - LENGTH(REPLACE(goals_by_team, ', ', ''))) > 1
